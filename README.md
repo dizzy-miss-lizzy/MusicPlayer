@@ -12,4 +12,5 @@ MainActivity displays a ListView of songs (contained in an ArrayList, along with
 ## Image sources:
 
 Icons: https://material.io/tools/icons/?style=baseline
+
 Vinyl record image: Taken by Jack Hamilton on https://unsplash.com/photos/CMnNiQBkwBI
