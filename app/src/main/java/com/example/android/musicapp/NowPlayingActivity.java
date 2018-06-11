@@ -60,7 +60,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (playButton.getTag() == 1) {
+                if (playButton.getTag().equals(1)) {
                     playButton.setImageResource(R.drawable.baseline_pause_black_48);
                     playButton.setTag(2);
                 } else {
