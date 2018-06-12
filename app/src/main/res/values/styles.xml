@@ -8,4 +8,136 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- MainActivity -->
+    <style name="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/card_view_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/card_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/card_view_margin_right</item>
+        <item name="android:layout_marginTop">@dimen/card_view_margin_top</item>
+    </style>
+
+    <style name="Song">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/song_margin_top</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/song_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Album">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/song_text_view</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/album_text_size</item>
+    </style>
+
+    <style name="Artist">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/album_text_view</item>
+        <item name="android:layout_marginBottom">@dimen/artist_margin_bottom</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="PlayButtonFilled">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginRight">@dimen/play_margin_right</item>
+    </style>
+
+    <!-- NowPlayingActivity -->
+    <style name="NowPlayingImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/default_image_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/default_image_margin</item>
+        <item name="android:layout_marginRight">@dimen/default_image_margin</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="PlayButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/default_image</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">@dimen/play_button_margin</item>
+        <item name="android:layout_marginRight">@dimen/play_button_margin</item>
+    </style>
+
+    <style name="FastForwardButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/default_image</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_toRightOf">@id/play_button</item>
+    </style>
+
+    <style name="RewindButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/default_image</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_toLeftOf">@id/play_button</item>
+    </style>
+
+    <style name="NowPlayingSong">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/play_button</item>
+        <item name="android:layout_marginTop">@dimen/playing_song_margin_top</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/playing_song_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NowPlayingAlbum">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/playing_song</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/playing_album_text_size</item>
+    </style>
+
+    <style name="NowPlayingArtist">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/playing_album</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="SeekBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignLeft">@id/default_image</item>
+        <item name="android:layout_alignRight">@id/default_image</item>
+        <item name="android:layout_below">@id/playing_artist</item>
+        <item name="android:layout_marginTop">@dimen/seekBar_margin_top</item>
+    </style>
+
+    <style name="VolumeOff">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/playing_artist</item>
+        <item name="android:layout_marginTop">@dimen/volume_margin_top</item>
+        <item name="android:layout_toLeftOf">@id/seekBar</item>
+    </style>
+
+    <style name="VolumeOn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/playing_artist</item>
+        <item name="android:layout_marginTop">@dimen/volume_margin_top</item>
+        <item name="android:layout_toRightOf">@id/seekBar</item>
+    </style>
+
 </resources>

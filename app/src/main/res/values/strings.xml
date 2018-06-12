@@ -2,7 +2,7 @@
     <string name="app_name">Music Player</string>
     <string name="now_playing">Now Playing</string>
     <string name="play_button">Play Button</string>
-    <string name="default_music">Default music note image</string>
+    <string name="default_music">Default vinyl record image</string>
     <string name="fast_forward_button">Fast forward button</string>
     <string name="rewind_button">Rewind button</string>
     <string name="volume_off">Volume off</string>

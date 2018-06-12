@@ -13,112 +13,54 @@
 
         <ImageView
             android:id="@+id/default_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/default_image_margin_bottom"
-            android:layout_marginEnd="@dimen/default_image_margin"
-            android:layout_marginLeft="@dimen/default_image_margin"
-            android:layout_marginRight="@dimen/default_image_margin"
-            android:layout_marginStart="@dimen/default_image_margin"
-            android:adjustViewBounds="true"
+            style="@style/NowPlayingImage"
             android:contentDescription="@string/default_music"
             android:src="@drawable/record" />
 
         <ImageView
             android:id="@+id/play_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/default_image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginEnd="@dimen/play_button_margin"
-            android:layout_marginLeft="@dimen/play_button_margin"
-            android:layout_marginRight="@dimen/play_button_margin"
-            android:layout_marginStart="@dimen/play_button_margin"
+            style="@style/PlayButton"
             android:contentDescription="@string/play_button"
             android:src="@drawable/baseline_play_arrow_black_48" />
 
         <ImageView
             android:id="@+id/fast_forward_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/default_image"
-            android:layout_centerHorizontal="true"
-            android:layout_toEndOf="@id/play_button"
-            android:layout_toRightOf="@id/play_button"
+            style="@style/FastForwardButton"
             android:contentDescription="@string/fast_forward_button"
             android:src="@drawable/baseline_fast_forward_black_48" />
 
         <ImageView
             android:id="@+id/rewind_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/default_image"
-            android:layout_centerHorizontal="true"
-            android:layout_toLeftOf="@id/play_button"
-            android:layout_toStartOf="@id/play_button"
+            style="@style/RewindButton"
             android:contentDescription="@string/rewind_button"
             android:src="@drawable/baseline_fast_rewind_black_48" />
 
         <TextView
             android:id="@+id/playing_song"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/play_button"
-            android:layout_marginTop="@dimen/playing_song_margin_top"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/playing_song_text_size"
-            android:textStyle="bold"
+            style="@style/NowPlayingSong"
             tools:text="song title" />
 
         <TextView
             android:id="@+id/playing_album"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/playing_song"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/playing_album_text_size"
+            style="@style/NowPlayingAlbum"
             tools:text="album name" />
 
         <TextView
             android:id="@+id/playing_artist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/playing_album"
-            android:gravity="center"
-            android:textColor="@android:color/black"
+            style="@style/NowPlayingArtist"
             tools:text="artist name" />
 
         <SeekBar
             android:id="@+id/seekBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/default_image"
-            android:layout_alignLeft="@id/default_image"
-            android:layout_alignRight="@id/default_image"
-            android:layout_alignStart="@id/default_image"
-            android:layout_below="@id/playing_artist"
-            android:layout_marginTop="@dimen/seekBar_margin_top" />
+            style="@style/SeekBar" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/playing_artist"
-            android:layout_marginTop="@dimen/volume_margin_top"
-            android:layout_toLeftOf="@id/seekBar"
-            android:layout_toStartOf="@id/seekBar"
+            style="@style/VolumeOff"
             android:contentDescription="@string/volume_off"
             android:src="@drawable/baseline_volume_off_black_24" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/playing_artist"
-            android:layout_marginTop="@dimen/volume_margin_top"
-            android:layout_toEndOf="@id/seekBar"
-            android:layout_toRightOf="@id/seekBar"
+            style="@style/VolumeOn"
             android:contentDescription="@string/volume_on"
             android:src="@drawable/baseline_volume_up_black_24" />
     </RelativeLayout>

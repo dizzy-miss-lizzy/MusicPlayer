@@ -2,9 +2,7 @@ package com.example.android.musicapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -72,18 +70,4 @@ public class NowPlayingActivity extends AppCompatActivity {
         });
         // End reference
     }
-
-    // Adds up navigation to action bar for returning to MainActivity
-    // Reference: https://developer.android.com/training/implementing-navigation/ancestral
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    // End reference
 }
