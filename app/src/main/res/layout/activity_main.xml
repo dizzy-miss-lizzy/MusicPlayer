@@ -10,6 +10,8 @@
     tools:context="com.example.android.musicapp.MainActivity">
 
     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/CardView"
         card_view:cardBackgroundColor="@color/cardViewBackground"
         card_view:cardCornerRadius="@dimen/card_view_corner"
