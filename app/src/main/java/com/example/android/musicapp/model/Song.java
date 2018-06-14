@@ -1,4 +1,4 @@
-package com.example.android.musicapp;
+package com.example.android.musicapp.model;
 
 /**
  * Custom class for songs.

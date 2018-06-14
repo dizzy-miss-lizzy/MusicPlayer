@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.android.musicapp.model.Song;
+
 import java.util.ArrayList;
 
 /**
@@ -19,30 +21,45 @@ public class SongAdapter extends ArrayAdapter<Song> {
         super(context, 0, songs);
     }
 
+    // Class to hold ArrayList Views.
+    // Reference: https://dzone.com/articles/optimizing-your-listview
+    static class ViewHolder {
+        private TextView songTextView;
+        private TextView albumTextView;
+        private TextView artistTextView;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the {@link Song} object located at current position
         Song currentSong = getItem(position);
 
+        ViewHolder holder;
+
         // Checks if the view is being reused, otherwise inflate
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.activity_main, parent, false);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_main, parent, false);
+            holder = new ViewHolder();
+            // Finds Song, Album, and Artist TextViews
+            holder.songTextView = (TextView) convertView.findViewById(R.id.song_text_view);
+            holder.albumTextView = (TextView) convertView.findViewById(R.id.album_text_view);
+            holder.artistTextView = (TextView) convertView.findViewById(R.id.artist_text_view);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        // Find Song TextView and sets the text to current Song object
-        TextView songTextView = (TextView) listItemView.findViewById(R.id.song_text_view);
-        songTextView.setText(currentSong.getSong());
+        // Sets the text to current Song object
+        holder.songTextView.setText(currentSong.getSong());
 
-        // Find Album TextView and sets the text to current Album object
-        TextView albumTextView = (TextView) listItemView.findViewById(R.id.album_text_view);
-        albumTextView.setText(currentSong.getAlbum());
+        // Sets the text to current Album object
+        holder.albumTextView.setText(currentSong.getAlbum());
 
-        // Find Artist TextView and sets the text to current Artist object
-        TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
-        artistTextView.setText(currentSong.getArtist());
+        // Sets the text to current Artist object
+        holder.artistTextView.setText(currentSong.getArtist());
+        // End reference
 
         // Return the whole list_item layout
-        return listItemView;
+        return convertView;
     }
 }

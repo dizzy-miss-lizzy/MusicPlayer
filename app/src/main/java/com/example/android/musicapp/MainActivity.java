@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.android.musicapp.model.Song;
+
 import java.util.ArrayList;
 
 /**
